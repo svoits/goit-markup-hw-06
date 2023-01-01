@@ -220,12 +220,13 @@ body {
 .btn {
   display: inline-block;
   padding: 16px 32px;
+  min-width: 169px;
 
   color: var(--secondary-text-color);
   background-color: var(--primary-brand);
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.19;
+  line-height: 1.5;
   letter-spacing: 0.04em;
 
   border-radius: 4px;
@@ -568,7 +569,12 @@ body {
   color: #e7e9fc;
 }
 
-.social-title {
+.social {
+  margin-right: auto;
+}
+
+.social-title,
+.subscription-title {
   margin-bottom: 12px;
 
   font-weight: 500;
@@ -605,6 +611,60 @@ body {
   background-color: #31d0aa;
 }
 
+/* SUBSCRIPTION IN FOOTER */
+
+.subscription-form-field {
+  margin-right: 24px;
+}
+
+.subscription-form-input {
+  width: 264px;
+  height: 40px;
+
+  padding: 8px 16px;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #e7e9fc;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: transparent;
+
+  transition: outline var(--transition-dur-and-timing);
+}
+
+.subscription-form-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-form-input:focus {
+  outline: 1px solid var(--primary-brand);
+  outline-offset: -1px;
+}
+
+.subscribe-btn {
+  padding: 8px 24px;
+  min-width: 165px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  box-shadow: none;
+}
+
+.subscribe-icon {
+  fill: #ffffff;
+}
+
 /* BACKDROP AND MODAL STYLES */
 
 .backdrop {
@@ -629,6 +689,8 @@ body {
 }
 
 .modal {
+  padding: 72px 24px 24px;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -679,4 +741,148 @@ body {
 
 .modal-icon {
   fill: currentColor;
+}
+
+.order-form-appeal {
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--dark);
+}
+
+.order-form-field {
+  display: block;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.order-form-label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.order-form-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 38px;
+
+  font-size: 12px;
+  background-color: transparent;
+  outline: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: outline var(--transition-dur-and-timing);
+}
+
+.order-form-input:focus {
+  outline: 1px solid var(--primary-brand);
+  outline-offset: -1px;
+}
+
+.order-form-icon {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+
+  transition: fill var(--transition-dur-and-timing);
+}
+
+.order-form-input:focus + .order-form-icon {
+  fill: var(--primary-brand);
+}
+
+.order-form-message {
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #000000;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  resize: none;
+
+  transition: outline var(--transition-dur-and-timing);
+}
+
+.order-form-message::placeholder {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.order-form-message:focus {
+  outline: 1px solid var(--primary-brand);
+  outline-offset: -1px;
+}
+
+.order-form-agreement {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 24px;
+
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+
+/* Checkbox */
+
+.order-form-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+
+  border: 1.25px solid var(--dark);
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  transition: background-color var(--transition-dur-and-timing), border-color var(--transition-dur-and-timing);
+}
+
+.order-form-checkbox:checked {
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: cover;
+  background-color: var(--primary-brand);
+  background-origin: border-box;
+  border-color: transparent;
+}
+
+.order-form-text {
+  user-select: none;
+}
+
+.order-form-link {
+  color: var(--primary-brand);
+}
+
+.order-form-btn {
+  display: block;
+  margin: 0 auto;
 }
