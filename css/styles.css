@@ -755,6 +755,10 @@ body {
   color: var(--dark);
 }
 
+.order-form-group {
+  margin-bottom: 16px;
+}
+
 .order-form-field {
   display: block;
   position: relative;
@@ -766,7 +770,7 @@ body {
   margin-bottom: 4px;
 
   font-size: 12px;
-  line-height: 1.33;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
@@ -803,10 +807,10 @@ body {
 }
 
 .order-form-message {
+  display: block;
   width: 100%;
   height: 120px;
   padding: 8px 16px;
-  margin-bottom: 16px;
 
   font-size: 12px;
   line-height: 1.33;
